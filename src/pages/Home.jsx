@@ -9,7 +9,18 @@ export default function Home({ addToCart=()=>{} }){
   return (
     <div>
       <header className='relative h-screen flex items-center justify-center overflow-hidden'>
-        <video className='absolute inset-0 w-full h-full object-cover brightness-75' src='/media/hero.mp4' autoPlay muted loop />
+       <video
+  className="absolute inset-0 w-full h-full object-cover brightness-75 pointer-events-none"
+  src="/media/hero.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+  disablePictureInPicture
+  controls={false}
+  aria-hidden="true"
+  tabIndex={-1}
+/>
         <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/70'></div>
         <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} className='relative z-10 text-center px-6'>
           <h1 className='text-4xl md:text-6xl font-extrabold'>Descubre <span className='text-yellow-400'>experiencias únicas</span></h1>
